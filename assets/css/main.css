@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    padding-top: 2vh;
+}
+.hidden {
+    display: none;
+}
+.game-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.technologies-wrapper {
+    height: 10vh;
+}
+
+.bin-wrapper {
+    align-self: flex-end;
+}
+
+.bin {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 40px);
+    transition: left 0.15s linear;
+    z-index: 1;
+}
+
+.score-and-mistakes-wrapper {
+    display: inline-block;
+}
+
+.game-start-modal {
+    display: block;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.game-over-modal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.game-over-modal,
+.game-start-modal {
+    opacity: 90%;
+    text-align: center;
+    background-color: #f1f1f1;
+    z-index: 999;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.game-over-overlay {
+    height: 100vh;
+    background-color: #f1f1f1;
+}
+
+.modal-content {
+    margin-top: calc(40vh - 40px);
+}
+
+.btn-restart,
+.btn-start {
+    cursor: pointer;
+    border-color: black;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 20px 80px;
+    margin: auto;
+    margin-top: 250px;
+    font-size: 3rem;
+}
+
+.btn-restart:hover,
+.btn-start:hover {
+    background-color: black;
+    color: white;
+}
+
+.icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+    top: calc(0 + 40px);
+}
+
+.angular,
+.react,
+.javascript,
+.css {
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40px;
+}
+
+.angular {
+    background-image: url("../img/angular.png");
+}
+
+.css {
+    background-image: url("../img/css.png");
+}
+
+.javascript {
+    background-image: url("../img/javascript.png");
+}
+
+.react {
+    background-image: url("../img/react.png");
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bin img {
+    width: 80px;
+}
+
+.technologies-wrapper,
+.bin-wrapper {
+    height: 10vh;
+    width: 100%;
+    position: relative;
+}
+
+.main {
+    transition: background-color 1s, box-shadow 1s;
+    width: 60vw;
+    height: 80vh;
+    margin: 2.5vh 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo-img {
+    max-height: 5vh;
+}
+
+.hidden {
+    display: none;
+}
+
+.level1 {
+    background-color: #eef1ff;
+    box-shadow: 0 0 10px #355fde;
+}
+.level2 {
+    background-color: #fff1f1;
+    box-shadow: 0 0 10px #de3535;
+}
+.level3 {
+    background-color: #fbf2ff;
+    box-shadow: 0 0 10px #9f34d9;
+}
+.level4 {
+    background-color: #f2fff2;
+    box-shadow: 0 0 10px #37d633;
+}

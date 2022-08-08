@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/main.css" type="text/css" />
+    <title>Catch a technology</title>
+</head>
+
+<body>
+    <div class="game-wrapper" id="gameWrapper">
+        <header class="header" id="header">
+            <h1 class="header-text" id="header-text">Welcome to Catch a technology game</h1>
+        </header>
+        <div class="main level1" id="main">
+            <div class="game-start-modal" id="game-start-modal">
+                <button id="btn-start" class="btn-start">Start</button>
+            </div>
+            <div class="game-over-modal hidden" id="game-over-modal">
+                <button class="btn-restart" id="btn-restart">Restart</button>
+                <div class="game-over-text" id="game-over-text"></div>
+            </div>
+            <div class="technologies-wrapper" id="technologiesWrapper"></div>
+            <div class="bin-wrapper collision-point" id="binWrapper">
+                <div class="bin" id="bin">
+                    <img src="./assets/img/trash-can-levi9.png" alt="kanta" />
+                </div>
+            </div>
+        </div>
+        <footer class="footer" id="footer">
+            <img class="logo-img" src="./assets/img/levi9-logo-text.jpg" alt="logo" />
+            <div class="score-and-mistakes-wrapper hidden" id="score-and-mistakes-wrapper">
+                <p>Score: <span id="score"> 0 </span></p>
+                <p>Mistakses: <span id="mistakes"> 0 </span></p>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>
