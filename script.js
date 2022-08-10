@@ -75,7 +75,7 @@ function init() {
 
     // collision point determined
     const collisionPoint =
-        game.mainHeight - game.binHeight - game.iconHeight + 10;
+        game.mainHeight - game.binHeight - game.iconHeight;
 
     // These margins determine if the icon is in the bin
     function getIconMargins() {
