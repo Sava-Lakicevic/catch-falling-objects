@@ -94,26 +94,19 @@ function init() {
     let currentLevel = 1;
 
     function gameStart() {
-        resetDisplayElements(displayElemts);
+        resetDisplayElements();
         setStartingConditions();
         setNewInterval();
     }
-    function resetDisplayElements({
-        gameStartModal,
-        gameOverModal,
-        scoreWrapper,
-        headerText,
-        scoreText,
-        mistakesText,
-    }) {
+    function resetDisplayElements() {
         // Hide the modals that do not need to be displayed
-        gameStartModal.classList.add("hidden");
-        gameOverModal.classList.add("hidden");
+        displayElemts.gameStartModal.classList.add("hidden");
+        displayElemts.gameOverModal.classList.add("hidden");
         // Uncover the score wrapper below the main element
-        scoreWrapper.classList.remove("hidden");
-        headerText.textContent = "Level 1";
-        scoreText.textContent = 0;
-        mistakesText.textContent = 0;
+        displayElemts.scoreWrapper.classList.remove("hidden");
+        displayElemts.headerText.textContent = "Level 1";
+        displayElemts.scoreText.textContent = 0;
+        displayElemts.mistakesText.textContent = 0;
     }
     function setStartingConditions() {
         // reset the bin position to the middle
