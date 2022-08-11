@@ -11,7 +11,7 @@ function init() {
     // starting conditions for the game
     const startingConditions = {
         iconSpeed: 1,
-        newIconInterval: 3000,
+        newIconInterval: 2000,
         binPosition: parseInt(window.getComputedStyle(bin).left),
     };
 
@@ -75,7 +75,7 @@ function init() {
 
     // collision point determined
     const collisionPoint =
-        game.mainHeight - game.binHeight - game.iconHeight;
+        game.mainHeight - game.binHeight - game.iconHeight + 10;
 
     // These margins determine if the icon is in the bin
     function getIconMargins() {
@@ -94,19 +94,26 @@ function init() {
     let currentLevel = 1;
 
     function gameStart() {
-        resetDisplayElements();
+        resetDisplayElements(displayElemts);
         setStartingConditions();
         setNewInterval();
     }
-    function resetDisplayElements() {
+    function resetDisplayElements({
+        gameStartModal,
+        gameOverModal,
+        scoreWrapper,
+        headerText,
+        scoreText,
+        mistakesText,
+    }) {
         // Hide the modals that do not need to be displayed
-        displayElemts.gameStartModal.classList.add("hidden");
-        displayElemts.gameOverModal.classList.add("hidden");
+        gameStartModal.classList.add("hidden");
+        gameOverModal.classList.add("hidden");
         // Uncover the score wrapper below the main element
-        displayElemts.scoreWrapper.classList.remove("hidden");
-        displayElemts.headerText.textContent = "Level 1";
-        displayElemts.scoreText.textContent = 0;
-        displayElemts.mistakesText.textContent = 0;
+        scoreWrapper.classList.remove("hidden");
+        headerText.textContent = "Level 1";
+        scoreText.textContent = 0;
+        mistakesText.textContent = 0;
     }
     function setStartingConditions() {
         // reset the bin position to the middle
@@ -121,6 +128,10 @@ function init() {
         game.score = 0;
         game.mistakes = 0;
         currentLevel = 1;
+        game.levels.forEach((level) => {
+            game.main.classList.remove(level);
+        });
+        game.main.classList.add(game.levels[0]);
     }
     function gameOver() {
         // hide the score wrapper at the bottom of the page
