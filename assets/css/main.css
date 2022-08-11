@@ -76,10 +76,9 @@
     cursor: pointer;
     border-color: black;
     border-radius: 5px;
-    margin-top: 10px;
     padding: 20px 80px;
     margin: auto;
-    margin-top: 250px;
+    margin-top: 20%;
     font-size: 3rem;
 }
 
